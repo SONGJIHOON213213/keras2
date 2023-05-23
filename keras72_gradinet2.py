@@ -15,6 +15,8 @@ for i in range(epochs):
     x = x - learning_rate * gradient(x)
     print(i + 1, x, f(x))
 
+print("Final solution: ", x, f(x))
+
 plt.plot(x_values, y_values, 'k-')
 plt.plot(x, f(x), 'ro')  # Plot the solution point
 plt.grid()
