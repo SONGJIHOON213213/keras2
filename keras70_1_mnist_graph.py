@@ -73,7 +73,7 @@ print("걸린 시간: {}분 {}초".format(int(minutes), int(seconds)))
 # history 객체 저장
 import pickle
 
-with open('./_save/keras70_1_mnist_grape.pkl', 'wb') as f:
+with open('d:/study/_save/keras70_1_mnist_grape.pkl', 'wb') as f:
     pickle.dump(hist.history, f)
 ################################### 시각화 ##########################################
 import matplotlib.pyplot as plt
@@ -100,3 +100,8 @@ plt.ylabel('epochs')
 plt.legend(['acc','val_acc'])
 
 plt.show()
+
+path = 'd:/keras/_data/telephone/'
+import joblib 
+joblib.dump(hist, path+ 'keras70_1_history.py')
+
